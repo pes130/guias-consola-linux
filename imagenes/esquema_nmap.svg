@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="48cm" height="20cm" viewBox="202 112 944 391" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Fondo">
+    <rect style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 4; stroke: #ff0000" x="330" y="281" width="308" height="34" rx="0" ry="0"/>
+    <text font-size="22.5778" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="202" y="307">
+      <tspan x="202" y="307">nmap</tspan>
+    </text>
+    <text font-size="16.1883" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="331" y="252">
+      <tspan x="331" y="252">Método de descubrimiento de equipos</tspan>
+    </text>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" x1="328" y1="265" x2="643" y2="266"/>
+    <text font-size="16.1883" style="fill: #0000ff; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="666.803" y="251.75">
+      <tspan x="666.803" y="251.75">Método de escaneo de puertos</tspan>
+    </text>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #0000ff" x1="663.803" y1="264.75" x2="919" y2="266"/>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="337" y="300">
+      <tspan x="337" y="300">por defecto es</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="436.8" y="299.6">
+      <tspan x="436.8" y="299.6">ping</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="338" y="338">
+      <tspan x="338" y="338">otras opciones:</tspan>
+      <tspan xml:space="preserve" x="338" y="354">   </tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="346" y="356">
+      <tspan x="346" y="356">-Pn</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="380" y="355">
+      <tspan x="380" y="355">no hace nada. Se miran todos los puertos</tspan>
+      <tspan x="380" y="371">de todos los hosts</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="344.8" y="396.6">
+      <tspan x="344.8" y="396.6">-PS</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="379.8" y="396.6">
+      <tspan x="379.8" y="396.6">escaneo SYN</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="344.8" y="417.6">
+      <tspan x="344.8" y="417.6">-PA</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="379.8" y="416.829">
+      <tspan x="379.8" y="416.829">escaneo ACK</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="344.8" y="436.6">
+      <tspan x="344.8" y="436.6">-PU</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="379.8" y="436.6">
+      <tspan x="379.8" y="436.6">escaneo UDP</tspan>
+    </text>
+    <g>
+      <path style="fill: none; stroke-opacity: 1; stroke-width: 6; stroke: #095309" d="M 543,217 A 116.479,116.479 0 0 1 771.326,203.126"/>
+      <polygon style="fill: #095309; fill-opacity: 1; stroke-opacity: 1; stroke-width: 6; stroke: #095309" fill-rule="evenodd" points="773.132,210.348 766.881,201.079 772.162,202.911 776.797,199.785 "/>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="659" y="151.425">
+      <tspan x="659" y="151.425">sólo se escanean </tspan>
+      <tspan x="659" y="167.425">puertos de equipos </tspan>
+      <tspan x="659" y="183.425">descubiertos</tspan>
+    </text>
+    <rect style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 4; stroke: #0000ff" x="664.8" y="280.7" width="359.2" height="69.3" rx="0" ry="0"/>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="679.8" y="300.6">
+      <tspan x="679.8" y="300.6">por defecto es</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="709.8" y="319.7">
+      <tspan x="709.8" y="319.7">soy root?</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="789" y1="315" x2="805.211" y2="302.842"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="811.211,298.342 806.211,308.342 805.211,302.842 800.211,300.342 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="791" y1="318" x2="803.024" y2="326.417"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" fill-rule="evenodd" points="809.168,330.718 798.109,329.079 803.024,326.417 803.843,320.887 "/>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="819" y="301">
+      <tspan x="819" y="301">sí</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="817.8" y="334.6">
+      <tspan x="817.8" y="334.6">no</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="850.8" y="300.6">
+      <tspan x="850.8" y="300.6">-sS</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="852.8" y="333.6">
+      <tspan x="852.8" y="333.6">-sT</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="879.8" y="298.6">
+      <tspan x="879.8" y="298.6">escaneo TCP SYN</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="879.8" y="333.6">
+      <tspan x="879.8" y="333.6">escaneo TCP Connect</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #ff0000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="432.869" y="149.205">
+      <tspan x="432.869" y="149.205">Para sacar los</tspan>
+      <tspan x="432.869" y="165.205">hosts levantados</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" x1="427.471" y1="169.254" x2="426.85" y2="209.641"/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="426.734,217.14 421.889,207.064 426.85,209.641 431.888,207.218 "/>
+    </g>
+    <text font-size="12.8" style="fill: #0000ff; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="869.817" y="126.174">
+      <tspan x="869.817" y="126.174">Para escanear</tspan>
+      <tspan x="869.817" y="142.174">los puertos de </tspan>
+      <tspan x="869.817" y="158.174">cada host </tspan>
+      <tspan x="869.817" y="174.174">descubierto</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #0000ff" x1="866.733" y1="177.838" x2="866.112" y2="218.225"/>
+      <polygon style="fill: #0000ff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #0000ff" fill-rule="evenodd" points="865.996,225.724 861.151,215.648 866.112,218.225 871.149,215.802 "/>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="666.359" y="368.301">
+      <tspan x="666.359" y="368.301">otras opciones:</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="668.672" y="386.807">
+      <tspan x="668.672" y="386.807">-sU</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="697.974" y="386.807">
+      <tspan x="697.974" y="386.807">escaneo UDP (puede combinarse con otros)</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="668.952" y="403.193">
+      <tspan x="668.952" y="403.193">-sN</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="698.254" y="403.193">
+      <tspan x="698.254" y="403.193">sondeo NULL</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="670.215" y="419.194">
+      <tspan x="670.215" y="419.194">-sF</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="699.517" y="419.194">
+      <tspan x="699.517" y="419.194">sondeo TCP FIN</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="670.494" y="435.579">
+      <tspan x="670.494" y="435.579">-sX</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="699.796" y="435.579">
+      <tspan x="699.796" y="435.579">sondeo Xmas</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="670.215" y="452.351">
+      <tspan x="670.215" y="452.351">-sA</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="699.517" y="452.351">
+      <tspan x="699.517" y="452.351">sondeo TCP ACK</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="670.494" y="468.737">
+      <tspan x="670.494" y="468.737">-sM</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="699.796" y="468.737">
+      <tspan x="699.796" y="468.737">sondeo Maimon</tspan>
+    </text>
+    <text font-size="16.1883" style="fill: #9306b4; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="945.19" y="253.472">
+      <tspan x="945.19" y="253.472">Otros modificadores</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1125.78" y="227.858">
+      <tspan x="1125.78" y="227.858">-sV</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1124.86" y="251.093">
+      <tspan x="1124.86" y="251.093">-A</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1124.86" y="272.684">
+      <tspan x="1124.86" y="272.684">-O</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="1130.26" y="287.335">
+      <tspan x="1130.26" y="287.335">...</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="929.922" y="500.058">
+      <tspan x="929.922" y="500.058">pablo.profe.tic@gmail.com</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="933.624" y="480.111">
+      <tspan x="933.624" y="480.111">Pablo Esteban Sánchez</tspan>
+    </text>
+  </g>
+</svg>
