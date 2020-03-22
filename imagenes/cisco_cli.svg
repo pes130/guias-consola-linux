@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="27cm" height="21cm" viewBox="234 46 537 413" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/>
+  <g id="Fondo">
+    <ellipse style="fill: #90ee90; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" cx="294" cy="287.5" rx="59" ry="54.5"/>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="295" y="281.5">
+      <tspan x="295" y="281.5">EXEC</tspan>
+      <tspan x="295" y="297.5">Usuario</tspan>
+    </text>
+    <ellipse style="fill: #ee90a1; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" cx="485.6" cy="102.3" rx="59" ry="54.5"/>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="485.6" y="100.3">
+      <tspan x="485.6" y="100.3">EXEC</tspan>
+      <tspan x="485.6" y="116.3">Privilegiado</tspan>
+    </text>
+    <ellipse style="fill: #ffff46; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" cx="710.6" cy="237.3" rx="59" ry="54.5"/>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="712.6" y="237.3">
+      <tspan x="712.6" y="237.3">Configuración</tspan>
+      <tspan x="712.6" y="253.3">Global</tspan>
+    </text>
+    <ellipse style="fill: #add8e6; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" cx="572.6" cy="404.3" rx="59" ry="54.5"/>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="573.6" y="398.3">
+      <tspan x="573.6" y="398.3">Configuración</tspan>
+      <tspan x="573.6" y="414.3">Específica</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ff0000" x1="326" y1="223" x2="419.873" y2="135.633"/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="425.363,130.523 421.449,140.996 419.873,135.633 414.637,133.676 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ff0000" x1="361.141" y1="246.581" x2="455.014" y2="159.213"/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="355.651,251.691 359.565,241.218 361.141,246.581 366.377,248.538 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ffa500" x1="551" y1="123" x2="663.483" y2="185.284"/>
+      <polygon style="fill: #ffa500; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ffa500" fill-rule="evenodd" points="670.044,188.917 658.873,188.447 663.483,185.284 663.717,179.698 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ffa500" x1="534.477" y1="160.876" x2="646.96" y2="223.16"/>
+      <polygon style="fill: #ffa500; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ffa500" fill-rule="evenodd" points="527.916,157.242 539.087,157.712 534.477,160.876 534.242,166.461 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #0000ff" x1="676.819" y1="308.243" x2="638" y2="370"/>
+      <polygon style="fill: #0000ff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #0000ff" fill-rule="evenodd" points="680.81,301.893 679.721,313.02 676.819,308.243 671.255,307.699 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #0000ff" x1="651.978" y1="278.178" x2="613.159" y2="339.935"/>
+      <polygon style="fill: #0000ff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #0000ff" fill-rule="evenodd" points="609.168,346.285 610.257,335.158 613.159,339.935 618.723,340.479 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-dasharray: 20 8 4 8; stroke: #ff0000" x1="508.575" y1="177.389" x2="554" y2="343"/>
+      <polygon style="fill: #ff0000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #ff0000" fill-rule="evenodd" points="506.591,170.156 514.059,178.478 508.575,177.389 504.415,181.123 "/>
+    </g>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(348,188) rotate(-43) translate(-348,-188)">
+      <tspan x="348" y="188">enable</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(556.6,113.7) rotate(29) translate(-556.6,-113.7)">
+      <tspan x="556.6" y="113.7">configure terminal</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(379.088,220.696) rotate(-43) translate(-379.088,-220.696)">
+      <tspan x="379.088" y="220.696">disable</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(577.078,176.208) rotate(29) translate(-577.078,-176.208)">
+      <tspan x="577.078" y="176.208">end</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(588.678,320.008) rotate(-57) translate(-588.678,-320.008)">
+      <tspan x="588.678" y="320.008">comando</tspan>
+      <tspan x="588.678" y="336.008">específico</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(645.58,339.084) rotate(-57) translate(-645.58,-339.084)">
+      <tspan x="645.58" y="339.084">exit</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" transform="translate(533.078,235.208) rotate(73) translate(-533.078,-235.208)">
+      <tspan x="533.078" y="235.208">end</tspan>
+    </text>
+  </g>
+</svg>
