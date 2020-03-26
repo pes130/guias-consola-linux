@@ -180,19 +180,25 @@ Trying 192.168.1.1 ...Open
 ## 11. Configurar acceso SSH
 Este acceso es más complicado que el acceso telnet. De nuevo, recuerda que lo primero es tener configurada una ip para acceder al dispositivo. Si estás trabajando con un switch de nivel 2, necesitas configurar la interfaz svi (ver apartado 12), si por contra, estás con un router, necesitas poner ip a una interfaz física
 
-Necesitamos crear un usuario:
+Necesitamos crear un usuario (Vamos a exigir autenticación con contraseña local):
 ```bash
-asir1a(config)#username asir secret asir
+asir1a(config)#username asir1a secret 12345
 ```
+PAra generar las claves RSA (que haremos después), necesitamos que nuestro dispositivo tenga un nombre distinto del genérico (Switch o Router) con el que viene configurado por defecto.
 
-Asegurarnos de que nuestro dispositivo tiene un nombre configurado:
+Cambiamos el nombre del dispositivo:
 ```bash
-asir1a(config)# hostname asir1a
+asir1a(config)# hostname asir_sw
 ```
 
 Poner a la máquina un nombre de dominio:
 ```bash
-asir1a(config)#ip domain-name asir1a.local
+asir1a(config)#ip domain-name iescelia.org
+```
+
+Generar claves con encriptación rsa:
+```bash
+asir1a(config)#crypto key generate rsa
 ```
 
 Configurar las líneas de acceso:
@@ -203,14 +209,9 @@ asir1a(config-line)# login local
 asir1a(config)# exit
 ```
 
-Generar claves con encriptación rsa:
-```bash
-asir1a(config)#crypto key generate rsa
-```
-
 Una vez hecho esto, desde cualquier pc o dispositivo podemos ejecutar:
 ```bash
-PC>ssh -l asir 192.168.1.1
+PC>ssh -l asir1a 192.168.1.1
 Open
 Password: 
 
