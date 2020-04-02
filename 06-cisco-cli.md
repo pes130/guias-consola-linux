@@ -15,6 +15,10 @@ Aunque podéis encontrar en Internet infinidad de manuales mucho más completos 
 * [10. Configurar acceso vía telnet](#10-configurar-acceso-vía-telnet)
 * [11. Configurar acceso SSH](#11-configurar-acceso-ssh)
 * [12. Configurar dhcp en un router/switch](#12-configurar-dhcp-en-un-routerswitch)
+* [14. Configuración de Switches](#14-configuración-de-switches)
+    * [14.1. Tabla de direcciones MAC](#141-tabla-de-direcciones-mac)
+    * [14.2. Configuración básica de puertos o interfaces](#142-configuración-básica-de-puertos-o-interfaces)
+    * [14.3. Establecer seguridad de puertos](#143-establecer-seguridad-de-puertos)
                                             
 ## 1. Navegación entre los distintos modos
 Tienes que entender Cisco CLI como un sistema operativo en modo texto para dispositivos Cisco. Tiene infinidad de comandos, y como te puedes imaginar, unos son más delicados que otros en el sentido de que alteran partes comprometidas del sistema. Esto hace necesario plantear un sistema de privilegios.
@@ -280,3 +284,121 @@ Ver eventos dhcp ocurridos en el servidor:
 ```bash
 asir1a# debug ip dhcp server events
 ```
+
+## 14. Configuración de switches
+En este apartado vamos a centrarnos en aspectos específicos de switches:
+
+### 14.1. Tabla de direcciones MAC
+Para ver la **Tabla de direcciones MAC** de un Switch:
+```bash
+asir1a# show mac-address-table
+```
+
+Si quieres borrar las direcciones aprendidas de manera dinámica:
+```bash
+asir1a# clear mac-address-table
+```
+### 14.2. Configuración básica de puertos o interfaces
+Antes de configurar un puerto o rango de puertos, tenemos que seleccionarlos para entrar en su **modo de configuración específico**. Para ello, desde el modo de configuración global, la sintaxis del comando a ejecutar es:
+```bash
+asir1a(config)# interface [type] [module/number]
+```
+Donde:
+*   **type**: FastEthernet, GigabitEthernet, ...
+*   **module/number**: 0/1, 0/2, 1/1, ... 
+
+Ejemplos:
+```bash
+asir1a(config)# interface FastEthernet 0/1
+```
+Podemos seleccionar **rangos de puertos**, con el comando:
+```bash
+asir1a(config)# interface range type module/primer número – último número
+```
+Ejemplo:
+```bash
+asir1a(config)# interface range FastEthernet 0/1-4, FastEthernet 0/10, FastEthernet 0/20-24
+```
+
+**Más cosas básicas a configurar:**
+* **Añadir una descripción a la interfaz**:
+    ```bash
+    asir1a (config-if)# description ‘Interfaz para sala 1’
+    ```
+* **Especificar la velocidad de los puertos**:
+    ```bash
+    asir1a(config-if)# speed [10 | 100 | 1000 | auto]
+    ```
+    Por ejemplo, para poner un puerto a 100 Mbps:
+    ```bash
+    asir1a(config-if)# speed 100
+    ```
+* **Especificar el modo de comunicación de los puertos**:
+    ```bash
+    asir1a(config-if)# duplex [auto | full | half]
+    ```
+    Por ejemplo:
+    ```bash
+    asir1a(config-if)# duplex full
+    ```
+
+
+### 14.3. Establecer seguridad de puertos
+En los apuntes tienes información más completa de todo esto. Lo que se muestra a continuación es básicamente una chuleta.
+Recuerda que las fases por las que debes pasar para configurar la seguridad de los puertos son:
+1. **Seleccionar el puerto/s a los que vamos a aplicar la configuración**. Ejemplo:
+    ```bash
+    asir1a(config)# interface FastEthernet 0/1
+    ```
+2. **Elegir el modo del puerto**: **`access`** o **`trunk`**. El modo por defecto, **`dynamic`**, no nos permite activar la seguridad:
+    
+    **Modo access** (conexión con dispositivos finales)
+    ```bash
+    asir1a(config-if)# switchport mode access 
+    ```
+    **Modo trunk** (conexión con dispositivos de interconexión)
+    ```bash
+    asir1a(config-if)# switchport mode trunk 
+    ```
+3. **Activar la seguridad en el puerto/s seleccionados**:
+    ```bash
+    asir1a(config-if)# switchport port-security
+    ```
+4. **Configurar aspectos específicos de la seguridad**:
+
+    1. **Establecer el máximo de MACs asociadas a un puerto.**:
+    Ej. Para que una interfaz tenga un máximo de 10 direcciones MAC asociadas:
+        ```bash
+        asir1a(config-if)# switchport port-security maximum 10
+        ```
+    2. **Asignar una MAC concreta a un puerto**:
+        ```bash
+        asir1a(config-if)# switchport port-security mac-address 000A.1A3A.A815
+        ```
+    3. **Configurar Sticky Secure MAC Addresses**:
+        ```bash
+        asir1a(config-if)# switchport port-security mac-address sticky
+        ```
+        Para desactivarlo:
+        ```bash
+        asir1a(config-if)# no switchport port-security mac-address sticky
+        ```
+    4. **Consultar el estado de la seguridad de un puerto**:
+        ```bash
+        asir1a# show port-security interface FastEthernet 0/1
+        ```
+5. **Acciones a tomar si se viola la política de seguridad**:
+Tres modos de actuación:
+    
+    1. **`shutdown`**: opción por defecto. El puerto se desactiva, y hay que activarlo a mano
+        ```bash
+        asir1a (config-if) # switchport port-security violation shutdown
+        ```
+    2. **`restrict`**: el puerto sigue activo, pero rechaza los paquetes desde las direcciones MAC que violen la restricción. Se deja constancia en un servidor de syslog
+        ```bash
+        asir1a (config-if) # switchport port-security violation restrict
+        ```
+    3. **`protect`**: igual que `restrict`, pero no deja constancia de lo ocurrido.
+        ```bash
+        asir1a (config-if) # switchport port-security violation protect
+        ```
