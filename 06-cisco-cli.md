@@ -2,6 +2,20 @@
 
 Aunque podéis encontrar en Internet infinidad de manuales mucho más completos que este, pretendo compilar aquí las acciones básicas con dispositivos Cisco de la manera más resumida posible, y ajustándose a lo que necesitamos en clase
 
+
+* [1. Navegación entre los distintos modos](#1-navegaci-n-entre-los-distintos-modos)
+* [2. Comando show](#2-comando-show)
+* [3. Cambiar el nombre al dispositivo](#3-cambiar-el-nombre-al-dispositivo)
+* [4. Proteger con contraseña el modo EXEC privilegiado](#4-proteger-con-contrase-a-el-modo-exec-privilegiado)
+* [5. Proteger el acceso por consola](#5-proteger-el-acceso-por-consola)
+* [6. Establecer un MOTD](#6-establecer-un-motd)
+* [7. Encriptar contraseñas en el dispositivo](#7-encriptar-contrase-as-en-el-dispositivo)
+* [8. Gestión de la configuración de Inicio](#8-gesti-n-de-la-configuraci-n-de-inicio)
+* [9. Configurar interfaz virtual de un switch (SVI)](#9-configurar-interfaz-virtual-de-un-switch--svi-)
+* [10. Configurar acceso vía telnet](#10-configurar-acceso-v-a-telnet)
+* [11. Configurar acceso SSH](#11-configurar-acceso-ssh)
+* [12. Configurar dhcp en un router/switch](#12-configurar-dhcp-en-un-router-switch)
+
 ## 1. Navegación entre los distintos modos
 Tienes que entender Cisco CLI como un sistema operativo en modo texto para dispositivos Cisco. Tiene infinidad de comandos, y como te puedes imaginar, unos son más delicados que otros en el sentido de que alteran partes comprometidas del sistema. Esto hace necesario plantear un sistema de privilegios.
 
