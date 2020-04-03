@@ -387,6 +387,10 @@ Recuerda que las fases por las que debes pasar para configurar la seguridad de l
         ```bash
         asir1a# show port-security interface FastEthernet 0/1
         ```
+        Otra manera de ver la configuración de un modo más general (no sólo de una interfaz) es:
+        ```bash
+        asir1a# show port-security interface address
+        ```
 5. **Acciones a tomar si se viola la política de seguridad**:
 Tres modos de actuación:
     
