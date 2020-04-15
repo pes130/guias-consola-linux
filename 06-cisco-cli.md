@@ -19,6 +19,7 @@ Aunque podéis encontrar en Internet infinidad de manuales mucho más completos 
     * [14.1. Tabla de direcciones MAC](#141-tabla-de-direcciones-mac)
     * [14.2. Configuración básica de puertos o interfaces](#142-configuración-básica-de-puertos-o-interfaces)
     * [14.3. Establecer seguridad de puertos](#143-establecer-seguridad-de-puertos)
+    * [14.4. Configuración de STP](#15-configuración-de-switches)
                                             
 ## 1. Navegación entre los distintos modos
 Tienes que entender Cisco CLI como un sistema operativo en modo texto para dispositivos Cisco. Tiene infinidad de comandos, y como te puedes imaginar, unos son más delicados que otros en el sentido de que alteran partes comprometidas del sistema. Esto hace necesario plantear un sistema de privilegios.
@@ -406,3 +407,18 @@ Tres modos de actuación:
         ```bash
         asir1a (config-if) # switchport port-security violation protect
         ```
+### 14.4. Configuración de STP
+El protocolo **STP** (Spanning Tree Protocol), aunque lo normal es que venga activado por defecto, puede desactivarse.
+
+* Activar STP:
+    ```bash
+    asir1a# spanning-tree vlan 1
+    ```
+* Desactivar STP:
+    ```bash
+    asir1a# no spanning-tree vlan 1
+    ```
+* Para ver la configuración spanning tree de nuestro switch, utilizaremos:
+    ```bash
+    asir1a# show spanning-tree
+    ``` 
