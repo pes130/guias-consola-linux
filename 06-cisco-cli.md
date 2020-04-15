@@ -19,7 +19,7 @@ Aunque podéis encontrar en Internet infinidad de manuales mucho más completos 
     * [14.1. Tabla de direcciones MAC](#141-tabla-de-direcciones-mac)
     * [14.2. Configuración básica de puertos o interfaces](#142-configuración-básica-de-puertos-o-interfaces)
     * [14.3. Establecer seguridad de puertos](#143-establecer-seguridad-de-puertos)
-    * [14.4. Configuración de STP](#15-configuración-de-switches)
+    * [14.4. Configuración de STP](#144-configuración-de-STP)
                                             
 ## 1. Navegación entre los distintos modos
 Tienes que entender Cisco CLI como un sistema operativo en modo texto para dispositivos Cisco. Tiene infinidad de comandos, y como te puedes imaginar, unos son más delicados que otros en el sentido de que alteran partes comprometidas del sistema. Esto hace necesario plantear un sistema de privilegios.
