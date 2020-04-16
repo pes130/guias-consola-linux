@@ -20,6 +20,10 @@ Aunque podéis encontrar en Internet infinidad de manuales mucho más completos 
     * [14.2. Configuración básica de puertos o interfaces](#142-configuración-básica-de-puertos-o-interfaces)
     * [14.3. Establecer seguridad de puertos](#143-establecer-seguridad-de-puertos)
     * [14.4. Configuración de STP](#144-configuración-de-STP)
+* [15. Sobre VLANs](#15-Sobre-VLANs)
+    * [15.1. Creación de VLANs](#151-Creación-de-VLANs)
+    * [15.2. Diagnósticos en VLANs](#152-Diagnósticos-en-VLANs)
+
                                             
 ## 1. Navegación entre los distintos modos
 Tienes que entender Cisco CLI como un sistema operativo en modo texto para dispositivos Cisco. Tiene infinidad de comandos, y como te puedes imaginar, unos son más delicados que otros en el sentido de que alteran partes comprometidas del sistema. Esto hace necesario plantear un sistema de privilegios.
@@ -422,3 +426,39 @@ El protocolo **STP** (Spanning Tree Protocol), aunque lo normal es que venga act
     ```bash
     asir1a# show spanning-tree
     ``` 
+
+## 15. Sobre VLANs
+### 15.1. Creación de VLANs
+Para **crear una VLAN o configurar una ya existente**, ejecutamos lo siguiente. Recuerda que una VLAN se identifica por un número y que el **1**, la vlan 1, ya está cogida porque es la vlan por defecto:
+```bash
+asir1a(config)# vlan número
+```
+
+Opcionalmente, puedo **poner un nombre a la VLAN** (recuerda que se identifican por un número). Para ello, dentro de la configuración específica de esa VLAN (es decir, ejecutando previamente `asir1a(config)# vlan número`), ejecuto:
+```bash
+asir1a(config-vlan) # name mi_vlan_de_prueba
+```
+
+Para **asignar puertos o interfaces a una vlan determinada**, dentro del modo de configuración
+específico de cada interfaz, ejecutamos lo siguiente: (por ejemplo, para la interfaz FastEthernet
+0/1, primero ejecuto `asir1a(config)# interface FastEthernet 0/1` y luego...):
+* Opcionalmente, cambiamos el modo del puerto: **trunk** si voy a conectarlo a un switch/router, **access** si voy a conectarlo a un dispositivo final:
+    ```bash
+    asir1a(config-if) # switchport mode access
+    ```
+* Y luego metemos esa interfaz en la vlan que deseemos
+    ```bash
+    asir1a(config-if) # switchport access vlan numero
+    ```
+
+### 15.2. Diagnósticos en VLANs
+Para obtener información de diagnóstico en una VLAN, básicamente emplearemos 2 comandos:
+1. Para obtener información general sobre la base de datos de VLAN del dispositivo (lista de vlans creadas, a qué vlan está asociada cada interfaz, ...):
+```bash 
+asir1a# show vlan
+```
+
+2. Para obtener detalles relativos a una vlan de una interfaz (su modo, el protocolo de encapsulación, su estado, ...): (por ejemplo, para la interfaz FastEthernet0/1)
+```bash 
+asir1a# show interface FastEthernet0/1 switchport
+```
