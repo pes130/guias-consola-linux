@@ -102,7 +102,7 @@ Hay 2 maneras de establecer contraseña: 1. en texto plano (no seguro), 2. cifra
     ```bash
     asir1a(config)# enable password contraseña
     ```
-2. Forma no segura (en texto plano)
+2. Forma segura (cifrado)
     ```bash
     asir1a(config)# enable secret contraseña
     ```
