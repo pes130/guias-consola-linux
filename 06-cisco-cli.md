@@ -23,6 +23,8 @@ Aunque podéis encontrar en Internet infinidad de manuales mucho más completos 
 * [15. Sobre VLANs](#15-Sobre-VLANs)
     * [15.1. Creación de VLANs](#151-Creación-de-VLANs)
     * [15.2. Diagnósticos en VLANs](#152-Diagnósticos-en-VLANs)
+    * [15.3. VTP](#153-VTP)
+    * [15.4. Enrutado entre VLANs usando un switch multicapa](#154-Enrutado-entre-VLANs-usando-un-switch-multicapa)
 
                                             
 ## 1. Navegación entre los distintos modos
@@ -461,4 +463,107 @@ asir1a# show vlan
 2. Para obtener detalles relativos a una vlan de una interfaz (su modo, el protocolo de encapsulación, su estado, ...): (por ejemplo, para la interfaz FastEthernet0/1)
 ```bash 
 asir1a# show interface FastEthernet0/1 switchport
+```
+
+### 15.3. VTP
+VTP es un protocolo que nos permite administrar vlans entre varios switches de manera centralizada. Se organiza por **dominios**. Se crea un dominio al que se adhieren los switches que van a ser gestionados de manera centralizada.
+En un dominio VTP, los switches pueden desempeñar distintos **roles**:
+* **servidor**: puede crear y eliminar vlans.
+* **cliente**: es informado de la creación y eliminación de vlans y replica los cambios (los crea/destruye en su base de datos según reciba mensajes para ello procedentes de un servidor vtp de su dominio)
+* **switch transparente**: Vive al margen de lo que ocurra en su dominio VTP. Los mensajes de creación/eliminación no le afectan.
+
+![Dominio VTP](imagenes/dominio_vtp.png "Dominio VTP")
+
+#### Funcionamiento
+1. Designamos cuál será el servidor vtp.
+2. Con el servidor vtp creamos un **dominio vtp** (formado por nombre y contraseña)
+3. Designamos que switches serán **clientes vtp**. 
+4. Adherimos los clientes al dominio vtp.
+5. Desde los servidores VTP se crean las vlan necesarias.
+
+
+#### Comandos
+1. **Configurar un servidor VTP**: le damos al switch el rol de servidor, creamos un dominio vtp y le ponemos una contraseña:
+```bash
+servidor-vtp(config)# vtp mode server
+servidor-vtp(config)# vtp domain 1asir
+servidor-vtp(config)# vtp password 123456
+```
+
+2. Configuramos un **cliente VTP**: le damos al switch el rol de cliente y lo adherimos a un dominio ya creado:
+```bash
+vtp-cliente-1(config)# vtp mode client
+vtp-cliente-1(config)# vtp domain 1asir
+vtp-cliente-1(config)# vtp password 123456
+```
+
+3. Configurar un switch **transparente**:
+```bash
+sw-transparente(config)# vtp mode transparent
+```
+
+4. Ver el **estado** de un dominio VTP:
+```bash
+vtp-cliente-1# show vtp status
+```
+Ejemplo de salida:
+```
+VTP Version                     : 2
+Configuration Revision          : 4
+Maximum VLANs supported locally : 255
+Number of existing VLANs        : 7
+VTP Operating Mode              : Client
+VTP Domain Name                 : 1asir
+VTP Pruning Mode                : Disabled
+VTP V2 Mode                     : Disabled
+VTP Traps Generation            : Disabled
+MD5 digest                      : 0x2C 0xB2 0x70 0x71 0x49 0x5B 0x98 0x34
+Configuration last modified by 0.0.0.0 at 3-1-93 00:33:35
+```
+
+### 15.4. Enrutado entre VLANs usando un switch multicapa
+Las VLANs en un switch (o en un dominio VTP), en principio, son divisiones lógicas aisladas. Podemos enrutar entre ellas de 2 maneras:
+1. Usando un router con la técnica *Router on a stick*
+2. Usando un **switch multicapa**.
+
+En este apartado, nos centramos en la segunda solución: Switch multicapa:
+![Enrutado switch multicapa](imagenes/enrutado_switch_multicapa.svg "Enrutado switch multicapa")
+
+Pasos:
+1. Creamos las 2 vlans
+```bash
+sw-multicapa(config)#vlan 10
+sw-multicapa(config-vlan)#exit
+sw-multicapa(config)#vlan 20
+sw-multicapa(config-vlan)#exit
+```
+
+2. Ponemos las interfaces necesarias en modo de acceso y las asociamos a las VLAN:
+```bash
+sw-multicapa(config)#interface range GigabitEthernet 1/0/1-12
+sw-multicapa(config-if-range)#switchport mode access
+sw-multicapa(config-if-range)#switchport access vlan 10
+sw-multicapa(config-if-range)# exit
+
+sw-multicapa(config)#interface range GigabitEthernet 1/0/13-24
+sw-multicapa(config-if-range)#switchport mode access
+sw-multicapa(config-if-range)#switchport access vlan 20
+```
+
+3. Configuramos las **SVI** (Switch virtual interfaces) en el switch:
+```bash
+sw-multicapa(config)# interface vlan 10
+sw-multicapa(config-if)#ip address 192.168.10.1 255.255.255.0
+sw-multicapa(config-if)#no shutdown
+sw-multicapa(config-if)#exit
+
+sw-multicapa(config)# interface vlan 20
+sw-multicapa(config-if)#ip address 192.168.20.1 255.255.255.0
+sw-multicapa(config-if)#no shutdown
+sw-multicapa(config-if)#exit
+```
+
+4. Activamos enrutado en el switch:
+```bash
+sw-multicapa(config)#ip routing
 ```
