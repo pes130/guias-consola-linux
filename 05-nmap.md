@@ -205,4 +205,11 @@ nmap -O --osscan-guess 192.168.1.1
 ```
 
 
+## 8. Posibles estados de puertos
+* **Open**: Puerto abierto, con un servicio escuchando en él
+* **Closed**: El puerto es accesible, pero no hay ningún servicio escuchando
+* **Filtered**: Nmap no recibe respuesta. Puede ser porque está filtrado por un firewall, un IDS, ...
 
+### 8.1. Flags TCP enviados durante el proceso
+La siguiente figura muestra los flags TCP que entran en juego para que una máquina ejecutando nmap detecte en cuál de los 3 posibles estados está un puerto en una máquina analizada:
+![Flags TCP para analizar puertos](imagenes/estados_puertos_nmap.svg "Flags TCP para analizar puertos")
