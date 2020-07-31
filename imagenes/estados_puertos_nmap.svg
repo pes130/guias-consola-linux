@@ -211,5 +211,11 @@
     <text font-size="12.8" style="fill: #ffa500; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="167.7" y="418.581">
       <tspan x="167.7" y="418.581">FILTERED</tspan>
     </text>
+    <text font-size="12.7998" style="fill: #4d4d4d; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="366" y="374">
+      <tspan x="366" y="374">pablo.profe.tic@gmail.com</tspan>
+    </text>
+    <text font-size="12.8" style="fill: #4d4d4d; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="365.7" y="357.581">
+      <tspan x="365.7" y="357.581">Pablo Esteban</tspan>
+    </text>
   </g>
 </svg>
